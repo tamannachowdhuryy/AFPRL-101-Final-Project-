@@ -1,0 +1,84 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Custom Header Styling */
+.custom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Left-aligned Logo */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-square {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+}
+
+.logo-text {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Center-aligned Navigation Links */
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.header-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Right-aligned Icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.search-icon {
+    font-size: 1.2em;
+}
+
+.menu-icon {
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
