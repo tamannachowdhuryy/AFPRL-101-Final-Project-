@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,79 +6,264 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
 }
 
-/* Custom Header Styling */
+/* Header Styling */
 .custom-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
+    background-color: #f8f8f8;
+    padding: 1rem 0;
     border-bottom: 1px solid #ddd;
 }
 
-/* Left-aligned Logo */
-.header-logo {
+.header-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.logo-square {
-    width: 10px;
-    height: 10px;
-    background-color: #000;
-}
-
-.logo-text {
-    font-size: 0.9em;
+/* Logo */
+.logo {
     font-weight: bold;
+    font-family: monospace;
     text-transform: uppercase;
 }
 
-/* Center-aligned Navigation Links */
-.header-nav {
+/* Main Navigation */
+.header-nav ul {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
+    list-style: none;
 }
 
-.header-nav a {
-    color: #000;
-    text-decoration: none;
-    font-size: 1em;
+.submenu-item {
+    font-family: monospace;
     text-transform: uppercase;
 }
 
-.header-nav a:hover {
-    text-decoration: underline;
+.submenu-link {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-/* Right-aligned Icons */
+.submenu-link:hover {
+    opacity: 0.5;
+}
+
+/* Icons */
 .header-icons {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .icon {
+    padding: 0.5rem;
+    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 10px;
-    border: 1px solid #000;
-    font-size: 0.9em;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+/* Parallax Sections */
+.parallax {
+    height: 100vh; 
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+}
+
+/* Specific styling for more-info links within parallax-1 */
+.parallax-1 .more-info {
+    list-style: none;
+    font-size: 1.5rem; /* Increase font size for readability */
+    text-align: center;
+    margin: 0.5em 0; 
+    font-weight: bold;
+}
+
+.parallax-1 .more-info a {
+    color: white; 
+    text-decoration: none;
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+}
+
+.parallax-1 .more-info a:hover {
+    text-decoration: underline; 
+}
+
+/* Ensure the links stay white when hovered */
+.parallax-1 .submenu-link {
+    color: white;
+}
+
+.parallax-1 {
+    background-image: url('img/Assata Shakur.jpg'); 
+}
+
+.parallax-2 {
+    background-image: url('img_parallax2.jpg'); 
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+/* Content Section */
+.content-section {
+    height: 1000px;
+    background-color: #f0f0f0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.content-section:nth-child(odd) {
+    background-color: #ffffff; /* White */
+}
+
+.content-section:nth-child(even) {
+    background-color: #f0f0f0; /* Light gray */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f8f8f8;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Carousel Styling for #stories */
+#stories {
+    padding: 40px;
+    background-color: #1d1d1e;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+/* Arrow Button Styling */
+.timeline-carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
     cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s;
 }
 
-.search-icon {
-    font-size: 1.2em;
+.timeline-carousel__arrow--left {
+    left: 10px;
 }
 
-.menu-icon {
-    font-size: 0.9em;
+.timeline-carousel__arrow--right {
+    right: 10px;
+}
+
+.timeline-carousel__arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Carousel Styling */
+.timeline-carousel__item-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.timeline-carousel__item {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.timeline-carousel__item:hover {
+    transform: scale(1.05);
+}
+
+.timeline-carousel__image {
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background-size: cover;
+    background-position: center;
+}
+
+.timeline-carousel__item-inner {
+    padding: 20px;
+    text-align: left;
+}
+
+.timeline-carousel__item-inner .year {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f4a261;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline-carousel__item-inner .month {
+    font-size: 14px;
+    color: #e76f51;
     text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.timeline-carousel__item-inner p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.timeline-carousel__item-inner .read-more {
+    font-size: 14px;
+    color: #e9c46a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.timeline-carousel__item-inner .read-more:hover {
+    color: #f4a261;
 }

@@ -3,28 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFPRL 101: Informational Magazine on Assata Shakur</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Final Project with Parallax</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <center><header class="custom-header">
+
+<header class="custom-header">
+    <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+            <span>AFPRL 101</span>
+        </div>
+
+        <!-- Navigation Links -->
         <nav class="header-nav">
-            <a href="#explore">EXPLORE</a>
-            <a href="#history">HISTORY</a>
-            <a href="#stories">STORIES</a>
-            <a href="#about">ABOUT</a>
+            <ul>
+                <li class="submenu-item"><a href="#explore" class="submenu-link">EXPLORE</a></li>
+                <li class="submenu-item"><a href="#history" class="submenu-link">HISTORY</a></li>
+                <li class="submenu-item"><a href="#stories" class="submenu-link">STORIES</a></li>
+                <li class="submenu-item"><a href="#about" class="submenu-link">ABOUT</a></li>
+            </ul>
         </nav>
-       
-    </header></center>
 
-    <main id="home">
-        <!-- Main content such as hero section goes here -->
-    </main>
+        <!-- Search and Menu Icons -->
+        <div class="header-icons">
+            <div class="icon search-icon">🔍</div>
+            <div class="icon menu-icon">MENU</div>
+        </div>
+    </div>
+</header>
 
-    <footer>
-        <p>&copy; 2024 AFPRL 101 Project Team</p>
-    </footer>
+<!-- Parallax Section 1 -->
+<div class="parallax parallax-1">
+    <ul>
+        <li class="more-info"><a href="#history" class="submenu-link"> Exploring the life of Assata Shakur</a></li>
+        <li class="more-info"><a href="#history" class="submenu-link"> Diving into the History of the US Criminal Justice System</a></li>
+        <li class="more-info"><a href="#stories" class="submenu-link"> Telling their stories</a></li>
+    </ul>
 
-    <script src="js/scripts.js"></script>
+</div>
+
+
+
+<!-- Parallax Section 2 -->
+<div class="parallax parallax-2"></div>
+
+
+
+<!-- Explore Section -->
+<section id="explore" class="content-section">
+    <h2>Explore</h2>
+    <p></p>
+</section>
+
+
+
+<!-- History Section -->
+<section id="history" class="content-section">
+    <h2>History</h2>
+    <p></p>
+</section>
+
+
+
+<!-- Start of Stories Section -->
+<section id="stories" class="content-section">
+    
+<!-- Left Button -->
+<button class="timeline-carousel__arrow timeline-carousel__arrow--left" aria-label="Previous">
+    &#9664;
+</button>
+
+<div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
+    <!-- Timeline Item 1 -->
+    <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image" style="background-image: url('');"></div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">YEAR</span>
+            <span class="month">MONTH</span>
+            <p>TEXT</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+    <!-- Timeline Item 2 -->
+    <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image" style="background-image: url('');"></div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">YEAR</span>
+            <span class="month">MONTH</span>
+            <p>TEXT</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+
+    <!-- Timeline Item 3 -->
+    <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image" style="background-image: url('');"></div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">YEAR</span>
+            <span class="month">MONTH</span>
+            <p>TEXT</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+
+    <!-- Timeline Item 4 -->
+    <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image" style="background-image: url('');"></div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">YEAR</span>
+            <span class="month">MONTH</span>
+            <p>TEXT</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+
+    <!-- Timeline Item 5 -->
+    <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image" style="background-image: url('');"></div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">YEAR</span>
+            <span class="month">MONTH</span>
+            <p>TEXT</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+    <!-- Timeline Item 6 -->
+    <div class="timeline-carousel__item">
+        <div class="timeline-carousel__image" style="background-image: url('');"></div>
+        <div class="timeline-carousel__item-inner">
+            <span class="year">YEAR</span>
+            <span class="month">MONTH</span>
+            <p>TEXT</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+</div>
+
+<!-- Right Button -->
+<button class="timeline-carousel__arrow timeline-carousel__arrow--right" aria-label="Next">
+    &#9654;
+</button>
+</section>
+
+<!-- End of Stories Section -->
+
+
+<!-- About Section -->
+<section id="about" class="content-section">
+    <h2>About</h2>
+    <p></p>
+</section>
+
+
+
+<footer class="footer">
+    <p>© 2024 AFPRL 101 Project Team</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+
