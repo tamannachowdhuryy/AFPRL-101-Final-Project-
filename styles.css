@@ -295,53 +295,18 @@ body {
     font-size: 0.875rem;
     color: #6b7280;
     line-height: 1.5;
-  }
-  
-  .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #6366f1;
-    border: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .nav-button:hover {
-    background: #4f46e5;
-    transform: translateY(-50%) scale(1.1);
-  }
-  
-  .nav-button:disabled {
-    background: #c7d2fe;
-    cursor: not-allowed;
-    transform: translateY(-50%);
-  }
-  
-  .prev-button {
-    left: 10px;
-  }
-  
-  .next-button {
-    right: 10px;
-  }
-  
-  .nav-button svg {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.timeline-carousel__item-inner .read-more {
+    font-size: 14px;
+    color: #e9c46a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.timeline-carousel__item-inner .read-more:hover {
+    color: #f4a261;
+}
