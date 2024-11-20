@@ -267,3 +267,42 @@ body {
 .timeline-carousel__item-inner .read-more:hover {
     color: #f4a261;
 }
+
+/* Explore Section Styling */
+#explore.content-section {
+    /*border: 5px solid black;*/
+    display: grid;
+    grid-template-rows: 100px 3fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    padding: 50px;
+    height: auto;
+    text-align: left;
+    font-size: 28px;
+}
+
+.section-header {
+    grid-area: header;
+    text-align: center;
+    font-size: 35px;
+}
+
+.section-main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.section-footer {
+    grid-area: footer;
+}
+
+/* Image Styling */
+.top-right-image {
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+}
