@@ -9,15 +9,74 @@ function showDetails(itemNumber) {
     // Toggle the selected detail
     details.style.display = isVisible ? 'none' : 'block';
 }
+
+
 const timelineData = [
-  { date: 'Oct. 30, 1959', title: 'Luther Jackson Murdered', description: '27-year-old Korean War veteran Luther Jackson was murdered by Philadelphia, Mississippi policeman Lawrence Rainey, who pulled Jackson from his parked car and fatally shot him. Rainey was never prosecuted and later became Neshoba County Sheriff, where he was implicated in covering up the 1964 murders of civil rights workers James Chaney, Andy Goodman, and Mickey Schwerner. Jackson’s murder, like many others, highlighted the systemic racism and police violence disproportionately targeting Black Americans during the Jim Crow era. Medgar Evers, as Mississippi NAACP field secretary, investigated Jacksons case, filing complaints and exposing the injustice to the national press in an effort to spur federal intervention. This case exemplifies how police violence and lack of accountability perpetuated fear and oppression in Black communities, fueling the broader civil rights movement.' },
-  { date: 'Oct. 30, 1959', title: 'First Milestone', description: 'Reached 10,000 active users.' },
-  { date: '2021 Q3', title: 'Expansion', description: 'Expanded to international markets.' },
-  { date: '2022 Q1', title: 'Major Update', description: 'Released version 2.0 with new features.' },
-  { date: '2022 Q4', title: 'Award Win', description: 'Won Industry Innovation Award.' },
-  { date: '2023 Q2', title: 'Partnership', description: 'Strategic partnership with key industry players.' },
-  { date: '2023 Q4', title: 'Technology Upgrade', description: 'Implemented AI-powered features.' },
-  { date: '2024 Q1', title: 'Global Recognition', description: 'Reached 1 million active users.' }
+  { 
+    date: 'Oct. 30, 1959', 
+    title: 'Luther Jackson', 
+    image: 'img/Luther-Jackson-detail.jpg', 
+    description: '27-year-old Korean War veteran Luther Jackson was murdered by Philadelphia, Mississippi policeman Lawrence Rainey, who pulled Jackson from his parked car and fatally shot him. Rainey was never prosecuted and later became Neshoba County Sheriff, where he was implicated in covering up the 1964 murders of civil rights workers James Chaney, Andy Goodman, and Mickey Schwerner. Jackson’s murder, like many others, highlighted the systemic racism and police violence disproportionately targeting Black Americans during the Jim Crow era. Medgar Evers, as Mississippi NAACP field secretary, investigated Jacksons case, filing complaints and exposing the injustice to the national press in an effort to spur federal intervention. This case exemplifies how police violence and lack of accountability perpetuated fear and oppression in Black communities, fueling the broader civil rights movement.'
+  },
+  { 
+    date: 'June 17, 1965', 
+    title: ' Jackson, Mississippi', 
+    description: 'Photographer Matt Herron captured a powerful moment in 1965 when a Mississippi Highway Patrolman, Hughie Kohler, tried to confiscate a U.S. flag from 5-year-old Anthony Quin during a civil rights protest in Jackson, Mississippi. Anthony and his mother, Aylene Quin, were protesting the disenfranchisement of African Americans by attempting to see Governor Paul Johnson but were denied entry and sat on the steps. The U.S. flag symbolized support for racial integration and federal law, standing in contrast to the Confederate flag, which represented opposition to civil rights. In the South, displaying the U.S. flag was a defiant act, often met with violent reactions from segregationists. Both Anthony Quin, who became Dr. Wayne Anthony Quin, and Matt Herron, the photographer, were honored for their roles in documenting and advancing civil rights.',
+    image: 'img/jackson.jpg'
+  },
+  { 
+    date: 'Feb. 8, 1968', 
+    title: 'Orangeburg Massacre', 
+    description: 'The Orangeburg Massacre on February 8, 1968, resulted in the deaths of three young men—Henry Smith, Samuel Hammond, and Delano Middleton—and injuries to 28 students after South Carolina state police fired on peaceful protesters at South Carolina State College. The protest, sparked by a Black Vietnam War veteran’s denial of access to a segregated bowling alley, escalated after students clashed with police, leading to a violent crackdown involving armed law enforcement and National Guard troops. Despite claims of self-defense, evidence showed the police fired without provocation, targeting unarmed students, many of whom were shot in the back or side. Cleveland Sellers, a bystander and former Student Nonviolent Coordinating Committee leader, was scapegoated, wounded, and sentenced to a year in prison for "inciting a riot," though he was pardoned 23 years later. The massacre, largely overshadowed in history, remains a tragic example of racial injustice and excessive force during the Civil Rights Movement, with no officers held accountable for the killings.',
+    image: 'img/Smith-Hammond-Middleton-Orangeburg.jpg'
+  },
+  { 
+    date: '2022 Q1', 
+    title: 'Major Update', 
+    description: 'Released version 2.0 with new features.',
+    image: 'path/to/image4.jpg'
+  },
+  { 
+    date: '2022 Q4', 
+    title: 'Award Win', 
+    description: 'Won Industry Innovation Award.',
+    image: 'path/to/image5.jpg'
+  },
+
+  { 
+    date: '2022 Q4', 
+    title: 'Award Win', 
+    description: 'Won Industry Innovation Award.',
+    image: 'path/to/image5.jpg'
+  },
+  { 
+    date: '2022 Q4', 
+    title: 'Award Win', 
+    description: 'Won Industry Innovation Award.',
+    image: 'path/to/image5.jpg'
+  },
+  { 
+    date: '2022 Q4', 
+    title: 'Award Win', 
+    description: 'Won Industry Innovation Award.',
+    image: 'path/to/image5.jpg'
+  },
+  
+  { 
+    date: '2022 Q4', 
+    title: 'Award Win', 
+    description: 'Won Industry Innovation Award.',
+    image: 'path/to/image5.jpg'
+  },
+  { 
+    date: '2022 Q4', 
+    title: 'Award Win', 
+    description: 'Won Industry Innovation Award.',
+    image: 'path/to/image5.jpg'
+  }
+
+  
+
 ];
 
 const timelineEvents = document.getElementById('timelineEvents');
@@ -60,6 +119,10 @@ function openModal(event) {
   document.getElementById('modalTitle').textContent = event.title;
   document.getElementById('modalDate').textContent = event.date;
   document.getElementById('modalDescription').textContent = event.description;
+
+  // Add the image to the modal
+  const modalImageContainer = document.getElementById('modalImageContainer');
+  modalImageContainer.innerHTML = `<img src="${event.image}" alt="${event.title}" class="modal-image">`;
 
   modal.style.display = 'block';
 }
