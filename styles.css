@@ -1,62 +1,67 @@
 /* Reset */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
-  
 }
 
-
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin: 20px 0; /* Adjust as needed */
+}
 
 /* Header Styling */
+
 .custom-header {
-  background-color: #f8f8f8;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9; 
+  padding: 20px 0;
+  text-align: center; 
 }
+
 
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px; 
+  flex-wrap: wrap; 
 }
 
-/* Logo */
+/* Logo Styling */
 .logo {
+  font-size: 2.5rem;
   font-weight: bold;
-  font-family: monospace;
-  text-transform: uppercase;
 }
 
-/* Main Navigation */
+
 .header-nav ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
+  list-style: none; 
+  display: flex; 
+  gap: 70px; 
+  padding: 0; 
+  margin: 0; 
 }
 
-.submenu-item {
-  font-family: monospace;
-  text-transform: uppercase;
-}
-
-.submenu-link {
-  color: black;
+.header-nav a {
   text-decoration: none;
   font-size: 1rem;
+  color: #333; 
+  font-weight: 600;
 }
 
-.submenu-link:hover {
-  opacity: 0.5;
+.header-nav a:hover {
+  color: #007BFF; 
+  transition: color 0.3s ease;
 }
+
 
 /* Icons */
 .header-icons {
@@ -166,19 +171,35 @@ body {
 }
 
 
-/* Timeline */
+/* Stories */
+#stories {
+  margin-top: 50px;
+  
+  
+}
+
+
+@media (max-width: 768px) {
+  .timeline-content {
+    width: 180px; 
+    height: auto; 
+  }
+}
+
+
 .timeline-wrapper {
-position: relative; 
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
+  position: relative; 
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 350px;
 }
 
 .timeline-container {
-position: relative;
-display: flex;
-justify-content: space-around; 
-align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
 }
 .timeline-line {
   position: absolute; 
@@ -191,16 +212,52 @@ align-items: center;
 }
 
 .timeline-content {
+  width: 200px; 
+  height: 150px; 
   background: white;
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
   cursor: pointer;
   transition: transform 0.3s ease;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto; 
 }
+
+
+.timeline-title {
+  font-size: 1rem; 
+  font-weight: 600;
+  color: #1f2937;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; 
+  word-wrap: break-word; 
+}
+
+.timeline-date {
+  font-size: 0.9rem; 
+  font-weight: 500;
+  color: #6366f1;
+  margin-bottom: 8px;
+  white-space: nowrap; 
+}
+
+.timeline-content p {
+  font-size: 0.9rem; 
+  color: #6b7280;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: normal; 
+  word-wrap: break-word; 
+  line-height: 1.5; 
+}
+
 
 .timeline-events {
   position: relative;
@@ -209,14 +266,8 @@ align-items: center;
   align-items: center;
   padding: 0 30px; 
   gap: 15px;
-  overflow: hidden;
 }
 
-.timeline-event {
-position: relative;
-z-index: 3;
-text-align: center;
-}
 
 .timeline-item {
   display: flex;
@@ -238,12 +289,6 @@ text-align: center;
   border-radius: 50%;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
-}
-
-.timeline-event {
-  flex-shrink: 0;
-  width: 18%; /* Adjust width to fit 5 events per row */
-  text-align: center;
 }
 
 .timeline-dot {
@@ -285,10 +330,12 @@ text-align: center;
   height: 30px;
   background: #6366f1;
   clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 70%);
+  padding-top: 350px;
 }
 
 .timeline-arrow.right {
   right: -15px;
+  padding-top: 350px;
 }
 
 
@@ -302,26 +349,16 @@ text-align: center;
   transform: scale(1.2);
 }
 
-.timeline-date {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #6366f1;
-  margin-bottom: 8px;
-}
-  
-.timeline-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 10px;
-}
-
 .timeline-description {
   font-size: 1rem;
   color: #6b7280;
   line-height: 1.8;
   color: black;
   margin-bottom: 1px;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05); 
 }
 
 .timeline-carousel__item-inner .read-more {
@@ -338,7 +375,7 @@ text-align: center;
 
 .nav-button {
   position: absolute;
-  top: 50%;
+  top: calc(50% + 175px); 
   transform: translateY(-50%);
   background: #6366f1;
   border: none;
@@ -355,6 +392,15 @@ text-align: center;
   transition: all 0.3s ease;
 }
 
+.prev-button {
+  left: -50px; 
+}
+
+.next-button {
+  right: -50px; 
+}
+
+
 .nav-button:hover {
   background: #4f46e5;
   transform: translateY(-50%) scale(1.1);
@@ -366,13 +412,6 @@ text-align: center;
   transform: translateY(-50%);
 }
 
-.prev-button {
-  left: -50px; /* Adjust position */
-}
-
-.next-button {
-  right: -50px; /* Adjust position */
-}
 
 .nav-button svg {
   width: 20px;
@@ -390,11 +429,11 @@ text-align: center;
 
 .timeline-image {
   width: 100%;
-  max-width: 200px; /* Adjust as needed */
+  max-width: 200px; 
   height: auto;
-  margin-bottom: 10px; /* Add some spacing below the image */
-  border-radius: 10px; /* Optional: rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow for the image */
+  margin-bottom: 10px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -410,36 +449,112 @@ text-align: center;
   z-index: 10;
 }
 
+
 .modal-content {
   background: white;
   padding: 20px;
-  width: 50%;
-  margin: 10% auto;
+  width: 1000px; 
+  height: 900px; 
+  margin: auto; 
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%); 
   border-radius: 12px;
-  position: relative; /* Enables absolute positioning for child elements */
+  overflow-y: auto; 
 }
 
 .modal-image-container {
-  text-align: center;
-  margin-top: 20px;
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 .modal-image {
-  max-width: 100%;
-  height: auto;
+  width: auto; 
+  height: auto; 
+  object-fit: cover; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close {
-  position: absolute; /* Allows positioning within the modal-content */
-  top: 10px; /* Adjust the vertical alignment */
-  right: 20px; /* Move it to the right side */
-  font-size: 20px; /* Size of the "X" */
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
   cursor: pointer;
-  color: black; /* Default color */
+  color: black;
 }
 
 .modal-close:hover {
-  color: #d32f2f; /* Change color on hover for better interactivity */
+  color: #d32f2f;
 }
+
+
+/* About */
+/* Styling for the About Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+/* General Styling */
+.content-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Container for Images */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Space between items */
+  margin-top: 20px;
+}
+
+/* Individual Image and Text */
+.image-item {
+  text-align: center;
+  max-width: 300px; /* Optional: Limit item width */
+}
+
+.image-item img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* Name Styling */
+.image-item .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Description Styling */
+.image-item .description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0 auto;
+  padding: 0 10px; /* Optional: Add padding for better readability */
+}
+
+
+.section-title {
+  font-size: 2rem;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+
