@@ -491,15 +491,7 @@ h2 {
 
 
 /* About */
-/* Styling for the About Section */
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-}
+
 
 /* General Styling */
 .content-section {
@@ -514,7 +506,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px; /* Space between items */
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 /* Individual Image and Text */
