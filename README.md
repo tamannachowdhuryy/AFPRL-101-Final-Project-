@@ -1,6 +1,6 @@
 # AFPRL 101 Final Project: An Informational Online Magazine on Assata
 
-[Visit Website]([https://www.yourwebsite.com](https://tamannachowdhuryy.github.io/AFPRL-101-Final-Project-/))
+[Visit Website](https://tamannachowdhuryy.github.io/AFPRL-101-Final-Project-/)
 
 ## Overview
 This project aims to develop an Informational Online Magazine inspired by the influential African-American publication Ebony. The magazine will be a website that provides a well-researched, visually impactful analysis of police violence and mass incarceration affecting Black communities. The project centers around Assata Shakur, with the book Assata: An Autobiography serving as the primary source.
