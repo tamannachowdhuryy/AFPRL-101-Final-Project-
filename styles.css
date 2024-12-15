@@ -548,3 +548,8 @@ h2 {
 .section-main {
   font-size: clamp(14px, 2vw, 1.5rem);
 }
+
+#works-cited.content-section {
+  display: grid;
+  grid-template-rows: 15% 85%;
+}
